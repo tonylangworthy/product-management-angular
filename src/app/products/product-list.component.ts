@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs';
 
 
 @Component({
-  selector: 'pm-products',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -61,7 +60,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
       error: e => this.errorMessage = e
     });
     
-    this.listFilter = 'cart';
+    this.listFilter = '';
   }
 
   ngOnDestroy(): void {
