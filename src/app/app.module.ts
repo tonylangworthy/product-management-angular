@@ -10,6 +10,7 @@ import { StarComponent } from './shared/star.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { StoreProductComponent } from './products/store-product.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PageNotFoundComponent } from './page-not-found.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'products', component: ProductListComponent },
+      { path: 'products/list', component: ProductListComponent },
+      { path: 'products/create', component: StoreProductComponent },
       { path: 'products/:id', component: ProductDetailComponent },
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
